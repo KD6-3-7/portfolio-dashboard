@@ -1,0 +1,54 @@
+.TodoItem {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    
+    &:hover {
+        .remove {
+            display: flex;
+        }
+    }
+
+    .check {
+        width: 32px;
+        height: 32px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ced4da;
+        border-radius: 16px;
+        font-size: 24px;
+        cursor: pointer;
+
+        &.done {
+            border: 1px solid #38d9a9;
+            color: #38d9a9;
+
+            & + .text {
+                color: #ced4da;
+            }
+        }
+    }
+
+    .text {
+        flex: 1;
+        color: #495057;
+        font-size: 21px;
+    }
+
+    .remove {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #dee2e6;
+        font-size: 24px;
+        cursor: pointer;
+
+        &:hover {
+            color: #ff6b6b;
+        }
+
+        display: none;
+    }
+}
