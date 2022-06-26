@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { MdDone, MdDelete } from 'react-icons/md';
 import cn from 'classnames';
-import './../scss/TodoItem.scss';
+import './../../styles/TodoApp/TodoItem.scss';
 
 const TodoItem = memo(({todo, onRemove, onCheck, style}) => {
     const {id, text, done} = todo;

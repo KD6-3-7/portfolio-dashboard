@@ -1,0 +1,11 @@
+.App {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}

@@ -1,0 +1,18 @@
+@import './../_style.scss';
+
+.Quotes {
+    font: {
+        family: 'Times New Roman', 'Noto Serif KR';
+        size: 18px;
+        weight: 400;
+    }
+
+    line-height: 36px;
+    color: $color-text;
+    word-break: keep-all;
+
+    .quote {
+        text-decoration: underline $color-main 2px;
+        text-underline-offset: 3px;
+    }
+}

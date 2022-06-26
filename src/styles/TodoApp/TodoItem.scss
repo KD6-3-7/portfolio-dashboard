@@ -1,3 +1,5 @@
+@import './../_style.scss';
+
 .TodoItem {
     display: flex;
     align-items: center;
@@ -12,28 +14,32 @@
     .check {
         width: 32px;
         height: 32px;
-        margin-right: 20px;
+        margin-left: 3px;
+        margin-right: 17px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid #ced4da;
-        border-radius: 16px;
         font-size: 24px;
+        border-radius: 16px;
+        background-color: $color-white;
+        box-shadow: 3px 3px 3px $color-shadow, -3px -3px 3px $color-light;
         cursor: pointer;
 
         &.done {
-            border: 1px solid #38d9a9;
-            color: #38d9a9;
+            color: $color-melon;
+            border: none;
+            background-color: $color-white;
+            box-shadow: inset 3px 3px 3px $color-shadow, inset -3px -3px 3px $color-light;
 
             & + .text {
-                color: #ced4da;
+                color: rgba($color-grey, 0.3);
             }
         }
     }
 
     .text {
         flex: 1;
-        color: #495057;
+        color: $color-grey;
         font-size: 21px;
     }
 
@@ -41,12 +47,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #dee2e6;
+        color: rgba($color-grey, 0.3);
         font-size: 24px;
         cursor: pointer;
 
         &:hover {
-            color: #ff6b6b;
+            color: $color-main;
         }
 
         display: none;

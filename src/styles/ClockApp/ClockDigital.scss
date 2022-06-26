@@ -1,0 +1,25 @@
+@import './../_style.scss';
+
+.ClockDigital {
+    display: flex;
+    justify-content: center;
+
+    .clock-hours, .clock-minutes {
+        color: $color-black;
+
+        font: {
+            size: 2.5rem;
+            weight: 100;
+        }
+    }
+
+    .clock-ampm {
+        margin-left: 0.25rem;
+        color: $color-black;
+
+        font: {
+            size: 0.625rem;
+            weight: 600;
+        }
+    }
+}

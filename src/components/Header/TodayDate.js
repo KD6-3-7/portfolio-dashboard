@@ -1,8 +1,6 @@
-import './../scss/TodoHead.scss';
+import './../../styles/Header/TodayDate.scss';
 
-function TodoHead({todos}) {
-    const undoneTasks = todos.filter(todo => !todo.done);
-
+function TodayDate() {
     const today = new Date();
     const dateString = today.toLocaleDateString('ko-KR', {
         year: 'numeric',
@@ -12,14 +10,13 @@ function TodoHead({todos}) {
     const dayName = today.toLocaleDateString('ko-KR', {
         weekday: 'long'
     });
-
+    
     return (
-        <div className='TodoHead'>
+        <div className='TodayDate'>
             <h1>{dateString}</h1>
             <div className='day'>{dayName}</div>
-            <div className='tasks-left'>할 일 {undoneTasks.length}개 남음</div>
         </div>
     );
 }
 
-export default TodoHead;
+export default TodayDate;

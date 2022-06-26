@@ -1,0 +1,103 @@
+@import './../_style.scss';
+
+.ClockAnalog {
+    width: 220px;
+    height: 220px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 16px $color-shadow;
+    transition: 0.4s;
+
+    .clock-twelve, .clock-three, .clock-six, .clock-nine {
+        position: absolute;
+        width: 1.5rem;
+        height: 1px;
+        background-color: $color-main;
+    }
+
+    .clock-twelve, .clock-six {
+        transform: translateX(-50%) rotate(90deg);
+    }
+
+    .clock-twelve {
+        top: 1.25rem;
+        left: 50%;
+    }
+
+    .clock-three {
+        top: 50%;
+        right: 0.75rem;
+    }
+
+    .clock-six {
+        bottom: 1.25rem;
+        left: 50%;
+    }
+
+    .clock-nine {
+        left: 0.75rem;
+        top: 50%;
+    }
+
+    .clock-center {
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: $color-main;
+        border: 2px solid $color-background;
+        border-radius: 50%;
+        z-index: 10;
+    }
+
+    .clockHand-hours, .clockHand-minutes, .clockHand-seconds {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+
+    .clockHand-hours {
+        width: 105px;
+        height: 140px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: $color-grey;
+            width: 0.25rem;
+            height: 5.5rem;
+            border-radius: 0.75rem;
+        }
+    }
+
+    .clockHand-minutes {
+        width: 136px;
+        height: 186px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: $color-grey;
+            width: 0.25rem;
+            height: 6.5rem;
+            border-radius: 0.75rem;
+        }
+    }
+
+    .clockHand-seconds {
+        width: 130px;
+        height: 200px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: $color-main;
+            width: 0.125rem;
+            height: 7.5rem;
+            border-radius: 0.75rem;
+        }
+    }
+}

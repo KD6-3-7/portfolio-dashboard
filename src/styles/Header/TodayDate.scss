@@ -1,0 +1,16 @@
+@import './../_style.scss';
+
+.TodayDate {
+    margin-right: 50px;
+    
+    h1 {
+        color: $color-text;
+        font-size: 36px;
+    }
+
+    .day {
+        margin-top: 4px;
+        color: rgba($color-grey, 0.7);
+        font-size: 21px;
+    }
+}

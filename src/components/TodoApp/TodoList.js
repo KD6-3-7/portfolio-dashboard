@@ -1,6 +1,6 @@
 import { memo, useCallback } from 'react';
 import { List } from 'react-virtualized';
-import './../scss/TodoList.scss';
+import './../../styles/TodoApp/TodoList.scss';
 import TodoItem from './TodoItem';
 
 const TodoList = memo(({todos, onRemove, onCheck}) => {
@@ -22,7 +22,7 @@ const TodoList = memo(({todos, onRemove, onCheck}) => {
         <List
             className='TodoList'
             width={512}
-            height={524}
+            height={450}
             rowCount={todos.length}
             rowHeight={56}
             rowRenderer={rowRenderer}

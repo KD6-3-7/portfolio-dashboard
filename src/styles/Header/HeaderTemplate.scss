@@ -1,0 +1,11 @@
+@import './../_style.scss';
+
+.HeaderTemplate {
+    margin: 80px auto;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 16px;
+}
