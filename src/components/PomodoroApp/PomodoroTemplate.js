@@ -1,9 +1,9 @@
 import './../../styles/PomodoroApp/PomodoroTemplate.scss';
 
-function PomodoroTemplate() {
+function PomodoroTemplate({children}) {
     return (
         <div className='PomodoroTemplate'>
-            <h2>🍅 Pomodoro Timer</h2>
+            {children}
         </div>
     );
 }

@@ -9,3 +9,7 @@
     justify-content: space-between;
     align-items: flex-start;
 }
+
+button:focus:not(:focus-visible) {
+    outline: 0;
+}

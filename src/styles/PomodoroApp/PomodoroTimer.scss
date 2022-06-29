@@ -1,0 +1,58 @@
+@import './../_style.scss';
+
+.PomodoroTimer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 220px;
+    height: 220px;
+    border-radius: 90%;
+    background: linear-gradient(315deg, $color-light 0%, $color-shadow 100%);
+    box-shadow: -20px -20px 40px $color-light, 20px 20px 40px $color-shadow;
+    cursor: pointer;
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    .timer {
+        width: 89.26%;
+        height: 89.26%;
+        padding: 11px;
+        border-radius: 90%;
+        background-color: $color-white;
+        box-shadow: 0px 0px 16px $color-shadow;
+
+        .CircularProgressbar {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .CircularProgressbar-text {
+                transform: translateY(5px);
+                text-anchor: middle;
+            }
+        }
+
+        .start-pause-btn {
+            margin-top: 50%;
+            margin-right: -5px;
+
+            font: {
+                family: 'Noto Sans KR';
+                font-weight: 600;
+                size: 14px;
+            }
+
+            background-color: $color-white;
+            border: none;
+            color: $color-text;
+            line-height: 14px;
+            letter-spacing: 5px;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+        }
+    }
+}
