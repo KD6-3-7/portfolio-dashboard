@@ -5,7 +5,7 @@ function TodoHead({todos}) {
 
     return (
         <div className='TodoHead'>
-            <h2>📜 To-do List</h2>
+            <h2>To-do List</h2>
             <div className='tasks-left'>할 일 {undoneTasks.length}개 남음</div>
         </div>
     );
