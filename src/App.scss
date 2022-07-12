@@ -5,9 +5,20 @@
 
 .flexbox {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    
+    &.row {
+        flex-direction: row;
+
+        &.fix {
+            width: 761px;
+        }
+    }
+
+    &.col {
+        flex-direction: column;
+    }
 }
 
 button:focus:not(:focus-visible) {

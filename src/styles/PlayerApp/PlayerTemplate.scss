@@ -1,0 +1,21 @@
+@import './../_style.scss';
+
+.PlayerTemplate {
+    width: 761px;
+    height: 288px;
+    position: relative;
+    padding: 32px;
+    padding-top: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    border: 3px solid $color-background;
+    border-radius: 16px;
+    box-shadow: -3px -3px 8px $color-light, 3px 3px 8px $color-shadow, inset 3px 3px 8px $color-shadow, inset -3px -3px 8px $color-light;
+
+    h2 {
+        color: $color-text;
+        font-size: 36px;
+    }
+}
