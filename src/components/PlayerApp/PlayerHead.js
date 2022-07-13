@@ -6,7 +6,7 @@ function PlayerHead({playPause}) {
             <h2>Now Playing...</h2>
             <div className='play'>
                 <input type='checkbox' id='play' onClick={playPause} hidden />
-                <label htmlFor='play' className='play-bg'>
+                <label htmlFor='play' className='play-switch'>
                     <span className='play-btn'>on</span>
                 </label>
             </div>

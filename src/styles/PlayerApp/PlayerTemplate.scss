@@ -6,10 +6,14 @@
     position: relative;
     padding: 32px;
     padding-top: 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: space-between;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // align-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     border: 3px solid $color-background;
     border-radius: 16px;
     box-shadow: -3px -3px 8px $color-light, 3px 3px 8px $color-shadow, inset 3px 3px 8px $color-shadow, inset -3px -3px 8px $color-light;

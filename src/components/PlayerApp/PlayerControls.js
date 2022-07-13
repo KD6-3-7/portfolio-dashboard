@@ -59,52 +59,50 @@ function PlayerControls({LiveStreamAudio, LiveStreamPlayPause}) {
                 />
                 {volumeIcon === 'unmute' ? <HiVolumeUp className={unmute} onClick={handleMute} /> : <HiVolumeOff className={unmute} onClick={handleMute} />}
             </div>
-            <div className='other-sounds'>
-                <div className='rain'>
-                    <input
-                        type='range'
-                        className='sound-dial'
-                        orient='vertical'
-                        min={0}
-                        max={1}
-                        step={0.2}
-                        value={rainVolume}
-                        onChange={e => {
-                            setRainvolume(e.target.valueAsNumber);
-                        }}
-                    />
-                    <GiHeavyRain />
-                </div>
-                <div className='wave'>
-                    <input
-                        type='range'
-                        className='sound-dial'
-                        orient='vertical'
-                        min={0}
-                        max={1}
-                        step={0.2}
-                        value={waveVolume}
-                        onChange={e => {
-                            setWavevolume(e.target.valueAsNumber);
-                        }}
-                    />
-                    <GiBigWave />
-                </div>
-                <div className='whiteNoise'>
-                    <input
-                        type='range'
-                        className='sound-dial'
-                        orient='vertical'
-                        min={0}
-                        max={1}
-                        step={0.2}
-                        value={whiteNoiseVolume}
-                        onChange={e => {
-                            setWhiteNoisevolume(e.target.valueAsNumber);
-                        }}
-                    />
-                    <GiSoundWaves />
-                </div>
+            <div className='volume'>
+                <input
+                    type='range'
+                    className='sound-dial'
+                    orient='vertical'
+                    min={0}
+                    max={1}
+                    step={0.2}
+                    value={rainVolume}
+                    onChange={e => {
+                        setRainvolume(e.target.valueAsNumber);
+                    }}
+                />
+                <GiHeavyRain />
+            </div>
+            <div className='volume'>
+                <input
+                    type='range'
+                    className='sound-dial'
+                    orient='vertical'
+                    min={0}
+                    max={1}
+                    step={0.2}
+                    value={waveVolume}
+                    onChange={e => {
+                        setWavevolume(e.target.valueAsNumber);
+                    }}
+                />
+                <GiBigWave />
+            </div>
+            <div className='volume'>
+                <input
+                    type='range'
+                    className='sound-dial'
+                    orient='vertical'
+                    min={0}
+                    max={1}
+                    step={0.2}
+                    value={whiteNoiseVolume}
+                    onChange={e => {
+                        setWhiteNoisevolume(e.target.valueAsNumber);
+                    }}
+                />
+                <GiSoundWaves />
             </div>
             <ReactPlayer
                 className='liveStreamPlayer'

@@ -68,6 +68,11 @@ function PlayerApp() {
     return (
         <PlayerTemplate>
             <PlayerHead />
+            <PlayerControls 
+                playPause={handlePausePlaySwitch}
+                LiveStreamAudio={currentLiveStream}
+                LiveStreamPlayPause={liveStream}
+            />
             <PlayerChannels
                 Ambient={AmbientRenders}
                 Nz={NzAmbience}
@@ -75,11 +80,6 @@ function PlayerApp() {
                 Lofi={LofiGirl}
                 Memoir={MemoirMusic}
                 Jazz={JazzHopCafe}
-            />
-            <PlayerControls 
-                playPause={handlePausePlaySwitch}
-                LiveStreamAudio={currentLiveStream}
-                LiveStreamPlayPause={liveStream}
             />
             <ReactPlayer
                 className='vid'

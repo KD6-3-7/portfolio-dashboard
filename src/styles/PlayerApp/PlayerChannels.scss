@@ -1,2 +1,44 @@
 @import './../_style.scss';
 
+.PlayerChannels {
+    width: 432px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 20px;
+
+    .options {
+        display: flex;
+        align-items: center;
+
+        input[type='radio'] {
+            position: relative;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin-right: 5px;
+            top: 3px;
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+            background-color: $color-white;
+            box-shadow: 3px 3px 3px $color-shadow, -3px -3px 3px $color-light;
+            cursor: pointer;
+            transition: 0.2s all linear;
+    
+            &:checked {
+                background-color: $color-melon;
+                box-shadow: inset 3px 3px 3px darken($color-melon, 10%), inset -3px -3px 3px lighten($color-melon, 10%);
+            }
+        }
+    
+        .select-btn {
+            margin-left: 10px;
+    
+            font: {
+                family: 'Noto Serif KR';
+                size: 18px
+            }
+        }
+    }
+}

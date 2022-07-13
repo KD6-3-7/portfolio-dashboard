@@ -1,2 +1,53 @@
 @import './../_style.scss';
 
+.PlayerHead {
+    width: 432px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .play {
+        margin-top: 3px;
+        margin-left: 20px;
+
+        #play:checked + .play-switch {
+            background-color: $color-melon;
+            box-shadow: inset 3px 3px 3px darken($color-melon, 5%), inset -3px -3px 3px lighten($color-melon, 5%);
+
+            .play-btn {
+                left: calc(100% - 35px);
+                box-shadow: 2px 2px 2px darken($color-melon, 5%), -2px -2px 2px lighten($color-melon, 5%);
+                background-color: $color-white;
+            }
+        }
+
+        .play-switch {
+            width: 72px;
+            height: 38px;
+            position: relative;
+            display: block;
+            border-radius: 32px;
+            background-color: $color-white;
+            box-shadow: inset 3px 3px 3px $color-shadow, inset -3px -3px 3px $color-light;
+            cursor: pointer;
+            transition: all 0.2s ease-in;
+
+            .play-btn {
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 50%;
+                left: 5px;
+                transform: translateY(-50%);
+                border-radius: 50%;
+                box-shadow: 2px 2px 2px $color-shadow, -2px -2px 2px $color-light;
+                background-color: $color-melon;
+                color: $color-melon;
+                text-align: center;
+                line-height: 30px;
+                transition: all 0.2s ease-in;
+            }
+        }
+    }
+}
