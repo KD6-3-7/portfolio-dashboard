@@ -13,11 +13,11 @@
 
         #play:checked + .play-switch {
             background-color: $color-melon;
-            box-shadow: inset 3px 3px 3px darken($color-melon, 5%), inset -3px -3px 3px lighten($color-melon, 5%);
+            box-shadow: inset 3px 3px 3px darken($color-melon, 10%), inset -3px -3px 3px lighten($color-melon, 10%);
 
             .play-btn {
                 left: calc(100% - 35px);
-                box-shadow: 2px 2px 2px darken($color-melon, 5%), -2px -2px 2px lighten($color-melon, 5%);
+                box-shadow: 2px 2px 2px darken($color-melon, 10%), -2px -2px 2px lighten($color-melon, 10%);
                 background-color: $color-white;
             }
         }

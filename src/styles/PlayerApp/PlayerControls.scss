@@ -1,61 +1,76 @@
 @import './../_style.scss';
 
 .PlayerControls {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-    align-content: space-between;
-
+    width: 230px;
+    height: 100%;
+    margin-left: 30px;
     grid-row: 1 / 3;
     grid-column: 2 / 3;
 
-    .volume {
-        margin: 0 auto;
-        height: 25%;
+    .flexbox {
+        width: 100%;
+        height: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
+        justify-items: center;
         align-items: center;
+        align-content: space-between;
 
-        input[type='range'][orient='vertical'] {
-            width: 174px;
-            height: 10px;
-            overflow: hidden;
-            -webkit-appearance: none;
-            background-color: $color-white;
+        .volume {
+            margin: 0 auto;
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
 
-            &:focus {
-                outline: none;
-            }
-
-            &::-webkit-slider-runnable-track {
+            input[type='range'] {
+                width: 150px;
+                height: 30px;
+                overflow: hidden;
                 -webkit-appearance: none;
-                width: 100%;
-                height: 100%;
-                border-radius: 16px;
-                border: 2px solid $color-melon;
-                cursor: pointer;
+                background-color: transparent;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &::-webkit-slider-runnable-track {
+                    -webkit-appearance: none;
+                    width: 100%;
+                    height: 10px;
+                    background-color: $color-white;
+                    border-radius: 5px;
+                    box-shadow: inset 3px 3px 3px $color-shadow, inset -3px -3px 3px $color-light;
+                    cursor: pointer;
+                }
+
+                &::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    width: 20px;
+                    height: 20px;
+                    margin-top: -4px;
+                    border-radius: 10px;
+                    background-color: $color-melon;
+                    box-shadow: 3px 3px 3px $color-shadow;
+                    cursor: pointer;
+                }
             }
 
-            &::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                width: 15px;
-                height: 15px;
-                border-radius: 16px;
-                background-color: $color-white;
-                box-shadow: 3px 3px 3px $color-shadow, -3px -3px 3px $color-light;
-                // box-shadow: -100vw 0 0 100vw $color-melon;
-                cursor: pointer;
-            }
-        }
+            svg {
+                color: $color-text;
 
-        svg {
-            margin-left: 15px;
-            font-size: 30px;
+                &.small-icon {
+                    margin-right: 15px;
+                    font-size: 25px;
+                }
+
+                &.large-icon {
+                    margin-left: 15px;
+                    font-size: 25px
+                }
+            }
         }
     }
-
 }
