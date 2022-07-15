@@ -30,7 +30,7 @@ function PlayerApp() {
 
     // Ambient, Nz, Chillhop, Lofi, Memoir, Jazz
     const AmbientRenders = () => {
-        setCurrentLiveStream('https://www.youtube.com/watch?v=GlEps1Ra06U&ab_channel=RelaxingAmbienceASMR');
+        setCurrentLiveStream('https://www.youtube.com/watch?v=CoP5wLD9clU&ab_channel=AmbientRenders');
         if (toggle) {
             setliveStreamPlay(true);
         } else {
@@ -57,7 +57,7 @@ function PlayerApp() {
     }
 
     const LofiGirl = () => {
-        setCurrentLiveStream('https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=LofiGirl');
+        setCurrentLiveStream('https://www.youtube.com/watch?v=jfKfPfyJRdk&ab_channel=LofiGirl');
         if (toggle) {
             setliveStreamPlay(true);
         } else {
@@ -75,7 +75,7 @@ function PlayerApp() {
     }
 
     const JazzHopCafe = () => {
-        setCurrentLiveStream('https://www.youtube.com/watch?v=U8HBZOTZrf0');
+        setCurrentLiveStream('https://www.youtube.com/watch?v=TYCBicKyVhs');
         if (toggle) {
             setliveStreamPlay(true);
         } else {

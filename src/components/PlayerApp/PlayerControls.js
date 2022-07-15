@@ -20,22 +20,18 @@ function PlayerControls({currentLiveStream, liveStreamPlay}) {
     wave.volume = waveVolume;
     whiteNoise.volume = whiteNoiseVolume;
 
-    if(rainVolume !== 0) {
+    if(rainVolume !== 0 || waveVolume !== 0 || whiteNoiseVolume !== 0) {
         rain.play();
         rain.loop = true;
+
+        wave.play();
+        wave.loop = true;
+
+        whiteNoise.play();
+        whiteNoise.loop = true;
     } else {
         rain.pause();
-    }
-    if(waveVolume !== 0) {
-        wave.play();
-        rain.loop = true;
-    } else {
         wave.pause();
-    }
-    if(whiteNoiseVolume !== 0) {
-        whiteNoise.play();
-        rain.loop = true;
-    } else {
         whiteNoise.pause();
     }
 
